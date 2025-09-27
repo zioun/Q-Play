@@ -110,7 +110,7 @@ const surahs = [
       { "surah_number": 109, "name": "Al-Kafiroon", "ayat_count": 6 },
       { "surah_number": 110, "name": "An-Nasr", "ayat_count": 3 },
       { "surah_number": 111, "name": "Al-Masad", "ayat_count": 5 },
-      { "surah_number": 112, "name": "Al-Ikhlas", "ayat_count": 4 },
+      { "surah_number": 112, "name": "Al-Ikhlas", "ayat_count": 4, "complete": "done" },
       { "surah_number": 113, "name": "Al-Falaq", "ayat_count": 5, "complete": "done" },
       { "surah_number": 114, "name": "An-Nas", "ayat_count": 6, "complete": "done"}
     ];
