@@ -115,6 +115,7 @@ const surahs = [
       { "surah_number": 114, "name": "An-Nas", "ayat_count": 6, "complete": "done"}
     ];
 
+    
     // function
 
     function calculateProgress(data) {
