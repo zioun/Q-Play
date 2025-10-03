@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Quran Progress Tracker</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="./q.png" type="image/x-icon">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quran Progress Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./q.png" type="image/x-icon" />
+  </head>
+  <body>
+    <section class="container">
+      
+      <div class="data-count">
+        <div>
+          <h1>Progress</h1>
+        </div>
+        <div>
+          <div class="stats" id="stats">Loading...</div>
+          <div class="date" id="date">Loading...</div>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar">0%</div>
+      </div>
 
-  <h1>📖 Quran Reading Progress</h1>
-  <div class="progress-container">
-    <div class="progress-bar" id="progressBar">0%</div>
-  </div>
+      
 
-  <div class="stats" id="stats">Loading...</div>
-  <div class="date" id="date">Loading...</div>
+      <div id="surahList" class="surah-container"></div>
+    </section>
 
-
-  <script src="./script.js"></script>
-  <script src="./date.js"></script>
-
-</body>
+    <script src="./script.js"></script>
+    <script src="./date.js"></script>
+    <script src="./surah-print.js"></script>
+  </body>
 </html>
