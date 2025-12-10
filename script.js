@@ -1,5 +1,5 @@
 const surahs = [
-      { "surah_number": 1, "name": "Al-Fatihah", "ayat_count": 7, "complete": "done" },
+      { "surah_number": 1, "name": "Al-Fatihah", "ayat_count": 7, "complete": "done", "link": "hello" },
       { "surah_number": 2, "name": "Al-Baqarah", "ayat_count": 286,},
       { "surah_number": 3, "name": "Al-Imran", "ayat_count": 200,},
       { "surah_number": 4, "name": "An-Nisa", "ayat_count": 176,},

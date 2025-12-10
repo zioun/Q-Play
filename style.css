@@ -1,91 +1,187 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #f3fff3, #e8ffe8);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  margin: 0;
-  padding: 20px;
+
+  /* Soft breathing animation */
+  animation: bgBreath 6s ease-in-out infinite;
 }
+
+@keyframes bgBreath {
+  0% { background: linear-gradient(135deg, #f3fff3, #e8ffe8); }
+  50% { background: linear-gradient(135deg, #ecffec, #dbffdb); }
+  100% { background: linear-gradient(135deg, #f3fff3, #e8ffe8); }
+}
+
 .container{
   max-width: 1200px;
+  width: 100%;
+  margin: auto;
 }
+
+/* =============================== */
+/* Heading + Stats                 */
+/* =============================== */
 
 h1 {
   margin-bottom: 20px;
-  color: #333;
+  color: #155015;
+  font-weight: 700;
+  font-size: 28px;
 }
+
 .data-count{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
+.stats,
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1d571d !important;
+}
+
+/* =============================== */
+/* Progress Bar                    */
+/* =============================== */
 
 .progress-container {
   width: 100%;
-  max-width: 100%;
-  background: #ddd;
-  border-radius: 20px;
+  background: #d9f7d9;
+  border-radius: 30px;
   overflow: hidden;
-  height: 35px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  height: 42px;
+  margin: 20px 0;
+  box-shadow: 0 4px 14px rgba(0, 80, 0, 0.15);
+
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+  0% { box-shadow: 0 4px 12px rgba(0, 90, 0, 0.2); }
+  50% { box-shadow: 0 4px 20px rgba(0, 140, 0, 0.3); }
+  100% { box-shadow: 0 4px 12px rgba(0, 90, 0, 0.2); }
 }
 
 .progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #4caf50, #45a049);
+  background: linear-gradient(90deg, #2ea82e, #1d7a1d);
   text-align: center;
   color: white;
-  font-weight: bold;
-  line-height: 35px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 1px;
   transition: width 1s ease-in-out;
 }
 
-.stats {
-  font-size: 18px;
-  font-weight: bold;
-  color: #444;
-}
+/* =============================== */
+/* Surah Cards                     */
+/* =============================== */
 
-.date {
-  font-size: 18px;
-  font-weight: bold;
-  color: #444;
-  margin-top: 5px;
-}
-
-/* surah card list css */
 .surah-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6টা কলাম */
-  gap: 15px; /* column & row gap */
-  margin-top: 50px;
+  grid-template-columns: repeat(3, 1fr); /* Desktop - 3 */
+  gap: 20px;
+  width: 100%;
+  margin-top: 40px;
+
+  animation: fadeIn 1s ease forwards;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .card {
-  background: white;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1.8px solid #d2f4d2;
+  box-shadow: 0 6px 20px rgba(0, 60, 0, 0.07);
+  position: relative;
+  cursor: pointer;
+
+  /* soft breathing motion */
+  animation: cardBreath 3s ease-in-out infinite;
 }
+
+@keyframes cardBreath {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.015); }
+  100% { transform: translateY(0) scale(1); }
+}
+
 .card:hover {
   transform: scale(1.05);
+  border-color: #86df86;
+  box-shadow: 0 10px 30px rgba(0, 120, 0, 0.15);
+  transition: 0.3s;
 }
+
 .card h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #154d15;
 }
+
 .card p {
-  margin: 5px 0;
-  color: #555;
+  margin: 0;
+  font-size: 16px;
+  color: #4a6a4a;
 }
+
 .gold {
-  background: gold;
-  color: black;
+  background: linear-gradient(135deg, #fff3c4, #ffe8a4);
+  border: 2px solid #ffd65f;
+  color: #3c2f00;
   font-weight: bold;
+  box-shadow: 0 8px 18px rgba(160, 120, 0, 0.2);
 }
+
+.play-icon{
+  color: #1a3d1a;
+  font-size: 22px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+/* =============================== */
+/* Responsive Layout               */
+/* =============================== */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .surah-container {
+    grid-template-columns: repeat(2, 1fr); /* Tablet = 2 */
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .surah-container {
+    grid-template-columns: repeat(2, 1fr); /* Tablet = 2 */
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
+
+
