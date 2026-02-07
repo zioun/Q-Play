@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #0c1110, #101816);
+  background: linear-gradient(135deg, #0F1614, #0F1614);
   margin: 0;
   padding: 20px;
   min-height: 100vh;
@@ -12,11 +12,10 @@ body {
 }
 
 @keyframes bgBreath {
-  0% { background: linear-gradient(135deg, #0c1110, #101816); }
-  50% { background: linear-gradient(135deg, #0e1513, #131f1c); }
-  100% { background: linear-gradient(135deg, #0c1110, #101816); }
+  0% { background: linear-gradient(135deg, #0F1614, #0F1614); }
+  50% { background: linear-gradient(135deg, #0F1614, #0F1614); }
+  100% { background: linear-gradient(135deg, #0F1614, #0F1614); }
 }
-
 .container{
   max-width: 1200px;
   width: 100%;
@@ -34,7 +33,12 @@ h1 {
   font-size: 28px;
   letter-spacing: 0.4px;
 }
-
+.count-time{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 .data-count{
   display: flex;
   justify-content: space-between;
